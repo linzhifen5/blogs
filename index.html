@@ -18,21 +18,118 @@
       <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
-  <link rel="stylesheet" href="/css/mycss.css">
+  <link rel="stylesheet" href="/css/index_css.css">
+
+  <style>
+    .loading{
+      width: 100%;
+      height: 100%;
+      background: #ccc;
+      position: fixed;
+      overflow: hidden;
+      z-index: 1000;
+    }
+
+    .loader {
+      position: relative;
+      width: 2.5em;
+      height: 2.5em;
+      transform: rotate(165deg);
+    }
+
+    .loader:before,
+    .loader:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: 0.5em;
+      height: 0.5em;
+      border-radius: 0.25em;
+      transform: translate(-50%, -50%);
+    }
+
+    .loader:before {
+      animation: before 2s infinite;
+    }
+
+    .loader:after {
+      animation: after 2s infinite;
+    }
+
+    @keyframes before {
+      0% {
+        width: 0.5em;
+        box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+      }
+
+      35% {
+        width: 2.5em;
+        box-shadow: 0 -0.5em rgba(225, 20, 98, 0.75), 0 0.5em rgba(111, 202, 220, 0.75);
+      }
+
+      70% {
+        width: 0.5em;
+        box-shadow: -1em -0.5em rgba(225, 20, 98, 0.75), 1em 0.5em rgba(111, 202, 220, 0.75);
+      }
+
+      100% {
+        box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+      }
+    }
+
+    @keyframes after {
+      0% {
+        height: 0.5em;
+        box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+      }
+
+      35% {
+        height: 2.5em;
+        box-shadow: 0.5em 0 rgba(61, 184, 143, 0.75), -0.5em 0 rgba(233, 169, 32, 0.75);
+      }
+
+      70% {
+        height: 0.5em;
+        box-shadow: 0.5em -1em rgba(61, 184, 143, 0.75), -0.5em 1em rgba(233, 169, 32, 0.75);
+      }
+
+      100% {
+        box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+      }
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    .loader {
+      position: absolute;
+      top: calc(50% - 1.25em);
+      left: calc(50% - 1.25em);
+    }
+  </style>
 </head>
 
 <body>
+  <!-- loading -->
+  <div class="loading">
+    <div class="loader"></div>
+  </div>
+
   <div class="container">
     <div class="text-center">
       <img class="headImg" src="/images/4.png" alt="">
     </div>
     <div class="text-center">
-      <p class="myTitle">dream</p>
+      <button class="myTitle" onclick="window.location.href='JavaScript:void(0)'">dream</button>
     </div>
     <div class="text-center myMenu">
-      <a href="">简历</a>
-      <a href="">点滴</a>
-      <a href="">留言</a>
+      <a href="/">简历</a>
+      <a href="/?id=2">作品展示</a>
+      <a href="/?id=3">留言</a>
     </div>
     <div class="page">
       <section>
@@ -187,6 +284,7 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
   <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+  <script src="/js/index_js.js"></script>
 </body>
 
 </html>
