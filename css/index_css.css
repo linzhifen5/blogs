@@ -70,6 +70,10 @@ a:hover {
   margin-bottom: 20px!important;
 }
 
+.dream-top {
+  margin-top: .9rem;
+}
+
 .page-table {
   border: 2px solid #ddd;
   border-radius: 5px;
