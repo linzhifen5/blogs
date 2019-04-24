@@ -1,0 +1,12 @@
+/* 服务器维护 */
+.server_up{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.server_up img {
+  width: 50%;
+}

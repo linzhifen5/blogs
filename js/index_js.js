@@ -13,8 +13,8 @@ $(function () {
   var windowVal = $(window).height();
   $(window).scroll(function () {
     var scrollVal = $(document).scrollTop();
-    console.log(scrollVal);
-    console.log(windowVal)
+    // console.log(scrollVal);
+    // console.log(windowVal)
     if (scrollVal > windowVal) {
       $(".gohome").css("display", "inline-block");
     } else {
