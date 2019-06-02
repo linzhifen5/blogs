@@ -141,8 +141,3 @@ a:hover {
   color: #fbb03c;
 }
 
-p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100%;
-}
